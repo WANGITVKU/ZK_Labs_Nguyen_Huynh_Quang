@@ -1,0 +1,9 @@
+bt 1 : 
+lý do chọn AES-GCM
+làm 1 code python dơn giản tạo  AES-GCM
+ bt2 :
+viết report bảng phân tích về thuật toán và công dung , sự khác nhau giữa chúng .
+tạo chữ ký ,kiểm tra chữ ký , xác minh chữ ký.
+chapter 3  :
+gọi hàm băm, làm code merkle tree
+kiểm tra kết quả có nằm trong hàm băm đó hay ko 
