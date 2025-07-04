@@ -1,0 +1,34 @@
+🧩 I. Hàm Băm (Hash Function)
+✅ Định nghĩa:
+Hàm băm là một hàm toán học nhận đầu vào là dữ liệu có độ dài bất kỳ, và trả về một chuỗi có độ dài cố định (gọi là mã băm hoặc hash).
+🔐 Ví dụ hàm băm:
+SHA-256 (256 bit)
+SHA-1 (160 bit)
+MD5 (128 bit)
+🔍 Tính chất quan trọng:
+Tính chất	Ý nghĩa
+Một chiều	Không thể tính ngược từ hash về dữ liệu gốc
+Không đụng hàng	Dữ liệu khác nhau → hash khác nhau
+Nhạy cảm	Chỉ cần thay đổi một ký tự → hash hoàn toàn khác
+Đầu ra cố định	Dù đầu vào dài bao nhiêu → đầu ra có độ dài cố định
+🌳 II. Merkle Tree là gì?
+✅ Khái niệm:
+Merkle Tree (còn gọi là hash tree) là cấu trúc dữ liệu dạng cây nhị phân, trong đó:
+Mỗi nút lá là một giá trị băm của dữ liệu gốc.
+Mỗi nút cha là giá trị băm của nối hai nút con lại.
+📌 Mục đích:
+Xác minh tính toàn vẹn dữ liệu hiệu quả
+Dễ kiểm tra xem một phần tử có tồn tại trong tập dữ liệu hay không mà không cần toàn bộ tập
+🧠 Cách hoạt động:
+Giả sử có 4 dữ liệu gốc: ["A", "B", "C", "D"]
+Tính hash của dữ liệu gốc:
+hA = hash("A")
+hB = hash("B")
+hC = hash("C")
+hD = hash("D")
+Ghép từng cặp hash để tạo tầng trên:
+hAB = hash(hA + hB)
+hCD = hash(hC + hD)
+Tạo gốc cây (root):
+root = hash(hAB + hCD)
+👉 Root này đại diện cho toàn bộ dữ liệu!
